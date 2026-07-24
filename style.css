@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Makes the navigation smoothly scroll to each section */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff5fa;
+  color: #4a3040;
+  line-height: 1.6;
+}
+
+/*HEADER*/
+
+header {
+  background-color: #ffb6d9;
+  color: #6b2d4f;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header-content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.logo {
+  font-family: "Fredoka", sans-serif;
+  color: #8f3d68;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-family: "Fredoka", cursive;
+  color: #7a2852;
+  font-size: 55px;
+  font-weight: normal;
+}
+
+header p {
+  font-family: "Fredoka", sans-serif;
+  color: #6b2d4f;
+  font-size: 16px;
+}
+
+/* NAVIGATION */
+
+#navbar {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Navigation links */
+#navbar a {
+  font-family: "Fredoka", sans-serif;
+  color: #d94f91;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Hover effect for navigation */
+#navbar a:hover {
+  color: #ff69b4;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.section {
+  border-top: 1px solid #ffd6e8;
+}
+
+section h2 {
+  font-family: "Fredoka", sans-serif;
+  color: #d94f91;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+/*  HOME*/
+
+#home {
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home h2 {
+  font-size: 36px;
+}
+
+#home p {
+  max-width: 750px;
+  margin: 20px auto;
+  font-size: 15px;
+}
+
+/* Profile picture */
+.profile-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+/* ABOUT */
+
+.aboutcontent {
+  background-color: white;
+  max-width: 850px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.aboutcontent h3 {
+  font-family: "Fredoka", sans-serif;
+  color: #d94f91;
+  margin-top: 20px;
+}
+
+.aboutcontent h3:first-child {
+  margin-top: 0;
+}
+
+.aboutcontent p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.aboutcontent ul {
+  margin-left: 25px;
+}
+
+.aboutcontent li {
+  margin-bottom: 5px;
+}
+
+/* SKILLS  CSS GRID= */
+
+.card-container {
+  max-width: 1000px;
+  margin: 30px auto;
+
+  /* CSS Grid requirement */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/*   CARDS */
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+
+  /* Simple shadow */
+  box-shadow: 0 3px 10px rgba(217, 79, 145, 0.12);
+
+  /* Hover animation */
+  transition: 0.3s;
+}
+
+/* Hover effect requirement */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(217, 79, 145, 0.2);
+}
+
+/*  EQUAL IMAGE SIZES */
+
+.card-image {
+  width: 100%;
+  height: 180px;
+
+  /* Makes all images fit inside the same size */
+  object-fit: cover;
+
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* IMAGE CAPTIONS */
+
+/* The h3 acts as the image caption */
+.card h3 {
+  font-family: "Fredoka", sans-serif;
+  color: #d94f91;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Caption description */
+.card p {
+  font-size: 14px;
+  color: #6b5260;
+}
+
+/* GALLERY */
+
+.section-description {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* Four gallery columns */
+#gallery .card-container {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#gallery .card-image {
+  height: 180px;
+}
+
+/* CONTACT FORM */
+
+#contact-form {
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  text-align: left;
+}
+
+#contact-form label {
+  display: block;
+  font-family: "Fredoka", sans-serif;
+  color: #d94f91;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ffd1e4;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #ff8fc7;
+}
+
+#contact-form textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+/* BUTTONS */
+
+.btn {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-right: 5px;
+  font-family: "Fredoka", sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button hover effect */
+.btn:hover {
+  background-color: #d94f91;
+}
+
+/*  FOOTER */
+
+#footer {
+  background-color: #d94f91;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+#footer p {
+  margin: 5px;
+  font-size: 14px;
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For tablets */
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #gallery .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 45px;
+  }
+
+  #navbar {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  section {
+    padding: 50px 20px;
+  }
+
+  .card-container,
+  #gallery .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutcontent {
+    padding: 20px;
+  }
+
+  #contact-form {
+    padding: 20px;
+  }
+}
